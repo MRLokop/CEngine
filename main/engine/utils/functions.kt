@@ -7,10 +7,10 @@ val __data = toMap(require("./kotlinApp")).encode()
 
 class ClassNotFoundException(message: String?) : Exception(message)
 
-fun getClass(pack: String): CosmicClass {
+fun getClass(pack: String): ReflectionClass {
     if (!__data.containsKey(pack))
         throw ClassNotFoundException("Class '$pack' not found!")
-    return CosmicClass(__data[pack])
+    return ReflectionClass(__data[pack])
 }
 
 fun timeout(time: Number, cb: () -> Unit?) {
@@ -65,7 +65,7 @@ inline fun jsObject(init: dynamic.() -> Unit): dynamic {
 }
 
 
-class CosmicClass(val data: dynamic) {
+class ReflectionClass(val data: dynamic) {
     fun new(vararg args: dynamic): dynamic {
         val a = data
         val b = args
