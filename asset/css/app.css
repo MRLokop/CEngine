@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Play');
+
+@import 'elements.css';
+
+body, html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Play', sans-serif;
+    background-color: #1b2b34;
+    color: #c0c5ce;
+}

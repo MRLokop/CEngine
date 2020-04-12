@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# IDEA
+/.idea/workspace.xml
+out/
+classes/
+*.iml
+
+# Gradle
+.gradle/
+build/
+
+# Node
+/node_modules
+package-lock.json
+yarn.lock
+
+# Kotlin
+/kotlin_build
+    
+/dist
