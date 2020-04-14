@@ -215,3 +215,11 @@ val String.inverse: String
 fun Console.log(vararg a: dynamic) {
     console.log(*a);
 }
+
+fun CharSequence.maxLength(maxSize: Int = 46, add: CharSequence = "..."): String {
+    if (this.length > maxSize)
+        return substring(0, maxSize) + add
+    else
+        return this.toString();
+
+}
