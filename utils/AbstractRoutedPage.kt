@@ -2,6 +2,7 @@ package engine.utils
 
 import engine.eng
 import engine.getModule
+import engine.modules.RouterUtils
 
 abstract class AbstractRoutedPage<P : RouterProps, S : react.RState> : AbstractComponent<P, S>() {
 

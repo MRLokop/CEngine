@@ -1,12 +1,14 @@
 package engine.utils
 
 import engine.CEngine
+import engine.modules.CUIModule
+import engine.modules.FormModule
+import engine.modules.RouterUtils
 
 class CEngineConfigurator(private val eng: CEngine) {
-    fun installRouter() : RouterUtils {
-        val router = RouterUtils();
-        eng.modules.put(router);
-        return router;
-    }
+    var appPacckage: String = "app";
 
+    fun installRouterUtils() = eng.getModule<RouterUtils>()
+    fun installFrom() = eng.getModule<FormModule>()
+    fun installCUI() = eng.getModule<CUIModule>()
 }
